@@ -1,0 +1,53 @@
+Kayıtlı öğrenciler
+
+İsim: Derda Karaaslan
+Kullanıcı adı: 191180049
+Şifre: 99999999999 (11 tane 9)
+
+İsim: Rabia Özdemir
+Kullanıcı adı: 191180050
+Şifre: 88888888888 (11 tane 8)
+
+İsim: Aycan Kaynakcı
+Kullanıcı adı: 191180051
+Şifre: 77777777777 (11 tane 7)
+
+
+
+Kayıtlı öğretmenler
+
+İsim: Oktay Yıldız
+Kullanıcı adı: 11111111111 (11 tane 1)
+Şifre: Oktay11Yıldız
+
+İsim: Özlem Alpay
+Kullanıcı adı: 22222222222 (11 tane 2)
+Şifre: Özlem22Alpay
+
+
+Kayıtlı Yöneticiler
+
+Kullanıcı adı: derda
+Şifre: karaaslan
+
+Kullanıcı adı: rabia
+Şifre: özdemir
+
+Kullanıcı adı: aycan
+Şifre: kaynakcı
+
+
+
+Veri Tabanı bilgileri
+
+Username: dJ66FYlFxK
+
+Database name: dJ66FYlFxK
+
+Password: 4n9TcIA0tV
+
+Server: remotemysql.com
+
+Port: 3306
+
+https://remotemysql.com/databases.php

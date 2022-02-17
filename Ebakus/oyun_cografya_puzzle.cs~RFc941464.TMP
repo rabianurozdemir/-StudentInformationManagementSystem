@@ -1,0 +1,1034 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+
+
+namespace cografya_puzel
+{
+    public partial class oyun_cografya_puzzle : Form
+    {
+        
+        public oyun_cografya_puzzle()
+        {
+            InitializeComponent();
+        }
+       
+        Image[] resimdizi = new Image[9];
+        static private MySqlConnection connection = new MySqlConnection("SERVER=remotemysql.com;PORT=3306;DATABASE=dJ66FYlFxK;UID=dJ66FYlFxK;PWD=4n9TcIA0tV;");
+        public void oyun_cografya_puzzle_Load(object sender, EventArgs e)
+        {
+            puzzelyerbelirle();
+            haritakucuk.Visible = false;
+            puzelicinbosbuton.Visible = false;                       
+            puzzle_bitir_buton.Enabled = false;
+            puzelbuton_dur.Enabled = false;
+            puzzletekrardenebuton.Enabled =false;           
+            resmi_goster.Enabled = false;
+            timer1.Enabled = false;
+           
+            timer_puzzlelabel1_dk.ForeColor = Color.Linen;          
+            timer1.Interval = 1000 * 60; //Timer1'in Interval'ini 1000 olarak ayarlıyoruz.1000=1sn
+
+            oyun_cografyaSetting(resimdizi);
+            
+
+            puzzlepart1_buton.Enabled = false;
+            puzzlepart2_buton.Enabled = false;
+            puzzlepart3_buton.Enabled = false;
+            puzzlepart4_buton.Enabled = false;
+            puzzlepart5_buton.Enabled = false;
+            puzzlepart6_buton.Enabled = false;
+            puzzlepart7_buton.Enabled = false;
+            puzzlepart8_buton.Enabled = false;
+            puzzlepart9_buton.Enabled = false;
+
+                      
+        }
+
+        public int buyumeMiktari = 100;
+        public void puzzelyerbelirle()
+        {
+            System.Drawing.Rectangle sayfa = Screen.PrimaryScreen.WorkingArea;
+            cpuzzel_panel.Size = new System.Drawing.Size(sayfa.Width / 2, ((sayfa.Height) * 5) / 6);//boyutlar için
+            puzzlepart1_buton.Size = new System.Drawing.Size(sayfa.Width / 10, sayfa.Height / 6);
+            puzzlepart2_buton.Size = puzzlepart1_buton.Size;
+            puzzlepart3_buton.Size = puzzlepart1_buton.Size;
+            puzzlepart4_buton.Size = puzzlepart1_buton.Size;
+            puzzlepart5_buton.Size = puzzlepart1_buton.Size;
+            puzzlepart6_buton.Size = puzzlepart1_buton.Size;
+            puzzlepart7_buton.Size = puzzlepart1_buton.Size;
+            puzzlepart8_buton.Size = puzzlepart1_buton.Size;
+            puzzlepart9_buton.Size = puzzlepart1_buton.Size;
+            puzzle_bitir_buton.Size = new System.Drawing.Size(sayfa.Width / 10, sayfa.Height / 18);
+
+            puzzle_cografya_basla_buton.Location = new Point((((sayfa.Width)) / 8) + (sayfa.Width / 10) * 6, sayfa.Height / 10);
+            puzelbuton_dur.Location = new Point((((sayfa.Width)) / 8) + (sayfa.Width / 10) * 6, sayfa.Height / 10 + (sayfa.Height / 6));
+            puzzletekrardenebuton.Location = new Point((((sayfa.Width)) / 8) + (sayfa.Width / 10) * 6, sayfa.Height / 10 + (sayfa.Height / 6) * 2);
+            resmi_goster.Location = new Point((((sayfa.Width)) / 8) + (sayfa.Width / 10) * 6, sayfa.Height / 10 + (sayfa.Height / 6) * 3);
+            puzzel_cıkıs_buton.Location = new Point((((sayfa.Width)) / 8) + (sayfa.Width / 10) * 6, sayfa.Height / 10 + (sayfa.Height / 6) * 4);
+            level_icin_label.Location = new Point(sayfa.Width / 100, sayfa.Height / 50);
+            timer_puzzlelabel1_dk.Location = new Point(sayfa.Width*2/5,sayfa.Height/25);
+            cpuzzel_panel.Location = new Point(sayfa.Width / 10, sayfa.Height / 10);//uzaklıklar için
+            puzzlepart1_buton.Location = new Point(((sayfa.Width)) / 9, sayfa.Height / 10);
+            puzzlepart2_buton.Location = new Point((((sayfa.Width)) / 9) + sayfa.Width / 10, sayfa.Height / 10);
+            puzzlepart3_buton.Location = new Point((((sayfa.Width)) / 9) + (sayfa.Width / 10) * 2, sayfa.Height / 10);
+            puzzlepart4_buton.Location = new Point(((sayfa.Width)) / 9, sayfa.Height / 10 + sayfa.Height / 6);
+            puzzlepart5_buton.Location = new Point((((sayfa.Width)) / 9) + sayfa.Width / 10, sayfa.Height / 10 + sayfa.Height / 6);
+            puzzlepart6_buton.Location = new Point((((sayfa.Width)) / 9) + (sayfa.Width / 10) * 2, sayfa.Height / 10 + sayfa.Height / 6);
+            puzzlepart7_buton.Location = new Point(((sayfa.Width)) / 9, sayfa.Height / 10 + (sayfa.Height / 6) * 2);
+            puzzlepart8_buton.Location = new Point((((sayfa.Width)) / 9) + sayfa.Width / 10, sayfa.Height / 10 + (sayfa.Height / 6) * 2);
+            puzzlepart9_buton.Location = new Point((((sayfa.Width)) / 9) + (sayfa.Width / 10) * 2, sayfa.Height / 10 + (sayfa.Height / 6) * 2);           
+            haritakucuk.Left = (Screen.PrimaryScreen.Bounds.Width - haritakucuk.Width) / 2;
+            haritakucuk.Top = (Screen.PrimaryScreen.Bounds.Height - haritakucuk.Height) / 2;
+            puzzle_bitir_buton.Location =new Point ((((sayfa.Width)) / 9) + sayfa.Width / 10, sayfa.Height / 10 + (sayfa.Height / 5)*3);
+
+
+        }
+        public int level;
+        public Image [] oyun_cografyaSetting(Image[]resimdizi)
+        {//puzzel için resim borut genişlik=480 yüksekli=425
+            System.Drawing.Rectangle sayfa = Screen.PrimaryScreen.WorkingArea;
+
+
+           
+            string level1 = "1";
+            string level2 = "1";
+            string level3 = "1";
+            string level4 = "0";
+            string level5 = "0";
+            string level6 = "0";
+            string level7 = "0";
+
+           
+
+
+
+
+
+
+
+
+
+
+
+            if (level1 == "0" && level2 == "0" && level3 == "0" && level4 == "0" && level5 == "0" && level6 == "0" && level7 == "0")
+                    {
+                level = 1;
+               
+                
+                Image orginal = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\marmara.jpg");
+                        var img = orginal;
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+
+                                var index = i * 3 + j;
+                                resimdizi[index] = new Bitmap(sayfa.Width / 10, sayfa.Height / 6);
+                                var graphics = Graphics.FromImage(resimdizi[index]);
+                                graphics.DrawImage(img, new Rectangle(0, 0, sayfa.Width / 10, sayfa.Height / 6), new Rectangle(i * sayfa.Width / 10, j * sayfa.Height / 6, sayfa.Width / 10, sayfa.Height / 6), GraphicsUnit.Pixel);
+                                graphics.Dispose();
+                            }
+
+
+                        }
+                puzzlepart1_buton.BackgroundImage = resimdizi[0];
+                puzzlepart2_buton.BackgroundImage = resimdizi[3];
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart6_buton.BackgroundImage = resimdizi[5];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[7];
+                puzzlepart9_buton.BackgroundImage = resimdizi[4];
+
+            }
+                    else if (level1 == "1" && level2 == "0" && level3 == "0" && level4 == "0" && level5 == "0" && level6 == "0" && level7 == "0")
+                    {
+                level = 2;
+                cpuzzel_panel.BackColor = Color.FromArgb(255, 219, 219);
+                puzzlepart1_buton.BackColor= Color.FromArgb(198, 255, 255);
+                puzzlepart2_buton.BackColor = Color.FromArgb(198, 255, 255);
+                puzzlepart3_buton.BackColor = Color.FromArgb(198, 255, 255);
+                puzzlepart4_buton.BackColor = Color.FromArgb(198, 255, 255);
+                puzzlepart5_buton.BackColor = Color.FromArgb(198, 255, 255);
+                puzzlepart6_buton.BackColor = Color.FromArgb(198, 255, 255);
+                puzzlepart7_buton.BackColor = Color.FromArgb(198, 255, 255);
+                puzzlepart8_buton.BackColor = Color.FromArgb(198, 255, 255);
+                puzzlepart9_buton.BackColor = Color.FromArgb(198, 255, 255);
+                level_icin_label.Text = "Level 2: Karadeniz";
+                Image orginal = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\karadeniz.jpg");
+                        var img = orginal;
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+
+                                var index = i * 3 + j;
+                                resimdizi[index] = new Bitmap(sayfa.Width / 10, sayfa.Height / 6);
+                                var graphics = Graphics.FromImage(resimdizi[index]);
+                                graphics.DrawImage(img, new Rectangle(0, 0, sayfa.Width / 10, sayfa.Height / 6), new Rectangle(i * sayfa.Width / 10, j * sayfa.Height / 6, sayfa.Width / 10, sayfa.Height / 6), GraphicsUnit.Pixel);
+                                graphics.Dispose();
+                            }
+                        }
+                        //kazanmak için sırasıyla 8,5,2,1 butonlarına basılmalı
+                puzzlepart1_buton.BackgroundImage = resimdizi[3];
+                puzzlepart2_buton.BackgroundImage = resimdizi[4];
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart5_buton.BackgroundImage = resimdizi[5];
+                puzzlepart6_buton.BackgroundImage = resimdizi[7];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[8];
+               
+            }
+            else if (level1 == "1" && level2 == "1" && level3 == "0" && level4 == "0" && level5 == "0" && level6 == "0" && level7 == "0")
+                    {
+                level = 3;
+                cpuzzel_panel.BackColor = Color.FromArgb(216, 255, 255);
+                puzzlepart1_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart2_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart3_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart4_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart5_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart6_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart7_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart8_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart9_buton.BackColor = Color.FromArgb(255, 227, 201);
+                level_icin_label.Text = "Level 3: İçanadolu";
+                Image orginal = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\icanadolu.jpg");
+                        var img = orginal;
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+
+                                var index = i * 3 + j;
+                                resimdizi[index] = new Bitmap(sayfa.Width / 10, sayfa.Height / 6);
+                                var graphics = Graphics.FromImage(resimdizi[index]);
+                                graphics.DrawImage(img, new Rectangle(0, 0, sayfa.Width / 10, sayfa.Height / 6), new Rectangle(i * sayfa.Width / 10, j * sayfa.Height / 6, sayfa.Width / 10, sayfa.Height / 6), GraphicsUnit.Pixel);
+                                graphics.Dispose();
+                            }
+                        }
+                //kazanmak için sırasıyla 2,5,6,9 butonlarına basılmalı
+                puzzlepart2_buton.BackgroundImage = resimdizi[0];
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart5_buton.BackgroundImage = resimdizi[3];
+                puzzlepart6_buton.BackgroundImage = resimdizi[4];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[5];
+                puzzlepart9_buton.BackgroundImage = resimdizi[7];
+            }
+            else if (level1 == "1" && level2 == "1" && level3 == "1" && level4 == "0" && level5 == "0" && level6 == "0" && level7 == "0")
+            {
+                level = 4;
+                cpuzzel_panel.BackColor = Color.FromArgb(216, 255, 255);
+                puzzlepart1_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart2_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart3_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart4_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart5_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart6_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart7_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart8_buton.BackColor = Color.FromArgb(255, 227, 201);
+                puzzlepart9_buton.BackColor = Color.FromArgb(255, 227, 201);
+                level_icin_label.Text = "Level 4: Ege";
+                Image orginal = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\ege.jpg");
+                        var img = orginal;
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+
+                                var index = i * 3 + j;
+                                resimdizi[index] = new Bitmap(sayfa.Width / 10, sayfa.Height / 6);
+                                var graphics = Graphics.FromImage(resimdizi[index]);
+                                graphics.DrawImage(img, new Rectangle(0, 0, sayfa.Width / 10, sayfa.Height / 6), new Rectangle(i * sayfa.Width / 10, j * sayfa.Height / 6, sayfa.Width / 10, sayfa.Height / 6), GraphicsUnit.Pixel);
+                                graphics.Dispose();
+                            }
+                        }
+                //kazanmak için sırasıyla 5,4,7,8,9butonlarına basılmalı
+                puzzlepart1_buton.BackgroundImage = resimdizi[0];                
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[4];
+                puzzlepart5_buton.BackgroundImage = resimdizi[3];
+                puzzlepart6_buton.BackgroundImage = resimdizi[7];
+                puzzlepart7_buton.BackgroundImage = resimdizi[1];
+                puzzlepart8_buton.BackgroundImage = resimdizi[2];
+                puzzlepart9_buton.BackgroundImage = resimdizi[5];
+            }
+            else if (level1 == "1" && level2 == "1" && level3 == "1" && level4 == "1" && level5 == "0" && level6 == "0" && level7 == "0")
+                    {
+                level = 5;
+                cpuzzel_panel.BackColor = Color.FromArgb(175, 156,156);
+                puzzlepart1_buton.BackColor = Color.FromArgb(167,188,147);
+                puzzlepart2_buton.BackColor = Color.FromArgb(167, 188, 147);
+                puzzlepart3_buton.BackColor = Color.FromArgb(167, 188, 147);
+                puzzlepart4_buton.BackColor = Color.FromArgb(167, 188, 147);
+                puzzlepart5_buton.BackColor = Color.FromArgb(167, 188, 147);
+                puzzlepart6_buton.BackColor = Color.FromArgb(167, 188, 147);
+                puzzlepart7_buton.BackColor = Color.FromArgb(167, 188, 147);
+                puzzlepart8_buton.BackColor = Color.FromArgb(167, 188, 147);
+                puzzlepart9_buton.BackColor = Color.FromArgb(167, 188, 147);
+                level_icin_label.Text = "Level 5: Doğuanadolu";
+                Image orginal = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\doguanadolu.jpg");
+                        var img = orginal;
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+
+                                var index = i * 3 + j;
+                                resimdizi[index] = new Bitmap(sayfa.Width / 10, sayfa.Height / 6);
+                                var graphics = Graphics.FromImage(resimdizi[index]);
+                                graphics.DrawImage(img, new Rectangle(0, 0, sayfa.Width / 10, sayfa.Height / 6), new Rectangle(i * sayfa.Width / 10, j * sayfa.Height / 6, sayfa.Width / 10, sayfa.Height / 6), GraphicsUnit.Pixel);
+                                graphics.Dispose();
+                            }
+                        }
+                //kazanmak için sırasıyla 7,8,5,6,3,2,1butonlarına basılmalı
+                puzzlepart1_buton.BackgroundImage = resimdizi[3];
+                puzzlepart2_buton.BackgroundImage = resimdizi[6];
+                puzzlepart3_buton.BackgroundImage = resimdizi[7];              
+                puzzlepart5_buton.BackgroundImage = resimdizi[5];
+                puzzlepart6_buton.BackgroundImage = resimdizi[4];
+                puzzlepart7_buton.BackgroundImage = resimdizi[1];
+                puzzlepart8_buton.BackgroundImage = resimdizi[2];
+                puzzlepart9_buton.BackgroundImage = resimdizi[8];
+            }
+            else if (level1 == "1" && level2 == "1" && level3 == "1" && level4 == "1" && level5 == "1" && level6 == "0" && level7 == "0")
+            {
+                level = 6;
+                cpuzzel_panel.BackColor = Color.FromArgb( 211, 165,182);
+                puzzlepart1_buton.BackColor = Color.FromArgb(188,133,81);
+                puzzlepart2_buton.BackColor = Color.FromArgb(188, 133, 81);
+                puzzlepart3_buton.BackColor = Color.FromArgb(188, 133, 81);
+                puzzlepart4_buton.BackColor = Color.FromArgb(188, 133, 81);
+                puzzlepart5_buton.BackColor = Color.FromArgb(188, 133, 81);
+                puzzlepart6_buton.BackColor = Color.FromArgb(188, 133, 81);
+                puzzlepart7_buton.BackColor = Color.FromArgb(188, 133, 81);
+                puzzlepart8_buton.BackColor = Color.FromArgb(188, 133, 81);
+                puzzlepart9_buton.BackColor = Color.FromArgb(188, 133, 81);
+               
+                level_icin_label.Text = "Level 6: Akdeniz";
+                Image orginal = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\akdeniz.jpg");
+                        var img = orginal;
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+
+                                var index = i * 3 + j;
+                                resimdizi[index] = new Bitmap(sayfa.Width / 10, sayfa.Height / 6);
+                                var graphics = Graphics.FromImage(resimdizi[index]);
+                                graphics.DrawImage(img, new Rectangle(0, 0, sayfa.Width / 10, sayfa.Height / 6), new Rectangle(i * sayfa.Width / 10, j * sayfa.Height / 6, sayfa.Width / 10, sayfa.Height / 6), GraphicsUnit.Pixel);
+                                graphics.Dispose();
+                            }
+                        }
+                //kazanmak için sırasıyla 5,8,9,6,3,2butonlarına basılmalı
+                puzzlepart1_buton.BackgroundImage = resimdizi[0];
+                puzzlepart2_buton.BackgroundImage = resimdizi[6];
+                puzzlepart3_buton.BackgroundImage = resimdizi[7];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart5_buton.BackgroundImage = resimdizi[8];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[4];
+                puzzlepart9_buton.BackgroundImage = resimdizi[5];
+            }
+            else if (level1 == "1" && level2 == "1" && level3 == "1" && level4 == "1" && level5 == "1" && level6 == "1" && level7 == "0")
+                    {
+                level = 7;
+                cpuzzel_panel.BackColor = Color.FromArgb(184,209,190);
+                puzzlepart1_buton.BackColor = Color.FromArgb(233,213,242);
+                puzzlepart2_buton.BackColor = Color.FromArgb(233, 213, 242);
+                puzzlepart3_buton.BackColor = Color.FromArgb(233, 213, 242);
+                puzzlepart4_buton.BackColor = Color.FromArgb(233, 213, 242);
+                puzzlepart5_buton.BackColor = Color.FromArgb(233, 213, 242);
+                puzzlepart6_buton.BackColor = Color.FromArgb(233, 213, 242);
+                puzzlepart7_buton.BackColor = Color.FromArgb(233, 213, 242);
+                puzzlepart8_buton.BackColor = Color.FromArgb(233, 213, 242);
+                puzzlepart9_buton.BackColor = Color.FromArgb(233, 213, 242);
+                level_icin_label.Text = "Level 7: Güneydoğuanadolu";
+                Image orginal = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\guneydoguanadolu.jpg");
+                        var img = orginal;
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+
+                                var index = i * 3 + j;
+                                resimdizi[index] = new Bitmap(sayfa.Width / 10, sayfa.Height / 6);
+                                var graphics = Graphics.FromImage(resimdizi[index]);
+                                graphics.DrawImage(img, new Rectangle(0, 0, sayfa.Width / 10, sayfa.Height / 6), new Rectangle(i * sayfa.Width / 10, j * sayfa.Height / 6, sayfa.Width / 10, sayfa.Height / 6), GraphicsUnit.Pixel);
+                                graphics.Dispose();
+                            }
+                        }
+                //kazanmak için sırasıyla 5,8,9,6,3,2,5,4butonlarına basılmalı
+                puzzlepart1_buton.BackgroundImage = resimdizi[1];
+                puzzlepart2_buton.BackgroundImage = resimdizi[6];
+                puzzlepart3_buton.BackgroundImage = resimdizi[7];
+                puzzlepart5_buton.BackgroundImage = resimdizi[4];
+                puzzlepart6_buton.BackgroundImage = resimdizi[8];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[3];
+                puzzlepart9_buton.BackgroundImage = resimdizi[5];
+            }
+            else
+                    {
+
+                        MessageBox.Show("OYUNU BİTİRDİNİZ TEBRİKLER!");
+
+                    }
+
+
+
+
+                  
+
+                    //////puzzelın tammen doğru olma durumu
+                    //puzzlepart1_buton.BackgroundImage = resimdizi[0];
+                    //puzzlepart2_buton.BackgroundImage = resimdizi[3];
+                    //puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                    //puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                    //puzzlepart5_buton.BackgroundImage = resimdizi[4];
+                    //puzzlepart6_buton.BackgroundImage = resimdizi[7];
+                    //puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                    //puzzlepart8_buton.BackgroundImage = resimdizi[5];
+                    //puzzlepart9_buton.BackgroundImage = resimdizi[8];
+                    connection.Close();
+                //}
+            
+            return resimdizi;
+        }
+
+        private void  puzzle_cografya_basla_buton_Click(object sender, EventArgs e)
+        {
+            puzzle_bitir_buton.Enabled = true;
+            puzzle_cografya_basla_buton.Enabled = false;
+            puzelbuton_dur.Enabled = true;
+            puzzletekrardenebuton.Enabled = true;         
+            resmi_goster.Enabled = true;
+            
+
+            puzzlepart1_buton.Enabled = true;
+            puzzlepart2_buton.Enabled = true;
+            puzzlepart3_buton.Enabled = true;
+            puzzlepart4_buton.Enabled = true;
+            puzzlepart5_buton.Enabled = true;
+            puzzlepart6_buton.Enabled = true;
+            puzzlepart7_buton.Enabled = true;
+            puzzlepart8_buton.Enabled = true;
+            puzzlepart9_buton.Enabled = true;
+
+            tiklanma_sayisi = 0;
+            timer1.Interval = 1000;
+            timer1.Enabled = true;
+            timer_puzzlelabel1_dk.ForeColor = Color.Linen;
+
+
+        }
+
+        int tiklanma_sayisi=0;
+        private void resmi_goster_Click(object sender, EventArgs e)
+        {
+
+            tiklanma_sayisi++;
+            if (tiklanma_sayisi == 1)
+            {
+                resmi_goster.Text = "Kapat";
+               
+                if (level == 1)
+                {
+                    haritakucuk.BackgroundImage= Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\marmara.jpg");
+
+                }
+                else if (level == 2)
+                {
+                    haritakucuk.BackgroundImage = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\marmara.jpg");
+                }
+                else if (level == 3)
+                {
+                    haritakucuk.BackgroundImage = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\karadeniz.jpg");
+                }
+                else if (level == 4)
+                {
+                    haritakucuk.BackgroundImage = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\ege.jpg"); 
+                }
+                else if (level == 5)
+                {
+                    haritakucuk.BackgroundImage = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\doguanadolu.jpg");
+                }
+                else if (level == 6)
+                {
+                    haritakucuk.BackgroundImage = Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\akdeniz.jpg");
+                }
+               else if (level == 7)
+                {
+                    haritakucuk.BackgroundImage =  Image.FromFile(Application.StartupPath.ToString() + @"\puzzleresim\guneydoguanadolu.jpg");
+                }
+                haritakucuk.Visible = true;
+            }
+            else if(tiklanma_sayisi==2)
+            {
+                resmi_goster.Text = "Görüldü";
+                haritakucuk.Visible = false;
+                resmi_goster.Enabled = false;
+
+            }
+        
+        }
+       
+        private void puzzel_cıkıs_buton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void puzzlepart1_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart2_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart2_buton.BackgroundImage = puzzlepart1_buton.BackgroundImage;
+                puzzlepart1_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart4_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart4_buton.BackgroundImage = puzzlepart1_buton.BackgroundImage;
+                puzzlepart1_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+
+        }
+
+        private void puzzlepart2_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart1_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart1_buton.BackgroundImage = puzzlepart2_buton.BackgroundImage;
+                puzzlepart2_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart3_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart3_buton.BackgroundImage = puzzlepart2_buton.BackgroundImage;
+                puzzlepart2_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if(puzzlepart5_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart5_buton.BackgroundImage = puzzlepart2_buton.BackgroundImage;
+                puzzlepart2_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+
+        }
+        private void puzzlepart3_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart2_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart2_buton.BackgroundImage = puzzlepart3_buton.BackgroundImage;
+                puzzlepart3_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+            else if (puzzlepart6_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart6_buton.BackgroundImage = puzzlepart3_buton.BackgroundImage;
+                puzzlepart3_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+
+
+        }
+        private void puzzlepart4_buton_Click(object sender, EventArgs e)
+        {
+            if (puzzlepart1_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart1_buton.BackgroundImage = puzzlepart4_buton.BackgroundImage;
+                puzzlepart4_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart5_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart5_buton.BackgroundImage = puzzlepart4_buton.BackgroundImage;
+                puzzlepart4_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if(puzzlepart7_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart7_buton.BackgroundImage = puzzlepart4_buton.BackgroundImage;
+                puzzlepart4_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+        }      
+
+        private void puzzlepart5_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart2_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart2_buton.BackgroundImage = puzzlepart5_buton.BackgroundImage;
+                puzzlepart5_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart4_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart4_buton.BackgroundImage = puzzlepart5_buton.BackgroundImage;
+                puzzlepart5_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart6_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart6_buton.BackgroundImage = puzzlepart5_buton.BackgroundImage;
+                puzzlepart5_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart8_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart8_buton.BackgroundImage = puzzlepart5_buton.BackgroundImage;
+                puzzlepart5_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+
+        }
+
+        private void puzzlepart6_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart3_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart3_buton.BackgroundImage = puzzlepart6_buton.BackgroundImage;
+                puzzlepart6_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart5_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart5_buton.BackgroundImage = puzzlepart6_buton.BackgroundImage;
+                puzzlepart6_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart9_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart9_buton.BackgroundImage = puzzlepart6_buton.BackgroundImage;
+                puzzlepart6_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+
+        }
+
+        private void puzzlepart7_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart4_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart4_buton.BackgroundImage = puzzlepart7_buton.BackgroundImage;
+                puzzlepart7_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+            else if (puzzlepart8_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart8_buton.BackgroundImage = puzzlepart7_buton.BackgroundImage;
+                puzzlepart7_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+
+        }
+
+        private void puzzlepart8_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart7_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart7_buton.BackgroundImage = puzzlepart8_buton.BackgroundImage;
+                puzzlepart8_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart5_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart5_buton.BackgroundImage = puzzlepart8_buton.BackgroundImage;
+                puzzlepart8_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+
+            }
+            else if (puzzlepart9_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart9_buton.BackgroundImage = puzzlepart8_buton.BackgroundImage;
+                puzzlepart8_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+
+        }
+      
+
+        private void puzzlepart9_buton_Click(object sender, EventArgs e)
+        {
+
+            if (puzzlepart8_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart8_buton.BackgroundImage = puzzlepart9_buton.BackgroundImage;
+                puzzlepart9_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+            else if (puzzlepart6_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage)
+            {
+                puzzlepart6_buton.BackgroundImage = puzzlepart9_buton.BackgroundImage;
+                puzzlepart9_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+
+
+        }
+
+     
+        int sayi = 60;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+          
+            if (sayi >= 0)
+            {
+                timer1.Interval = 1000;
+                timer1.Enabled = true;
+                int sayac = sayi--;
+                timer_puzzlelabel1_dk.Text = sayac.ToString();
+            }
+           
+        }
+
+        private void puzzletekrardenebuton_Click(object sender, EventArgs e)
+        {
+            puzzle_bitir_buton.Enabled = false;
+            puzzle_cografya_basla_buton.Enabled = true;
+            puzelbuton_dur.Enabled = false;
+            puzzletekrardenebuton.Enabled = false;
+            resmi_goster.Text = "Resim Göster";
+            resmi_goster.Enabled = false;
+            if (level == 1)
+            {
+                puzzlepart1_buton.BackgroundImage = resimdizi[0];
+                puzzlepart2_buton.BackgroundImage = resimdizi[3];
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart5_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+                puzzlepart6_buton.BackgroundImage = resimdizi[5];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[7];
+                puzzlepart9_buton.BackgroundImage = resimdizi[4];
+            }
+            else if (level == 2)
+            {
+                puzzlepart1_buton.BackgroundImage = resimdizi[3];
+                puzzlepart2_buton.BackgroundImage = resimdizi[4];
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart5_buton.BackgroundImage = resimdizi[5];
+                puzzlepart6_buton.BackgroundImage = resimdizi[7];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[8];
+                puzzlepart9_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+            }
+            else if (level == 3)
+            {
+                puzzlepart1_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+                puzzlepart2_buton.BackgroundImage = resimdizi[0];
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart5_buton.BackgroundImage = resimdizi[3];
+                puzzlepart6_buton.BackgroundImage = resimdizi[4];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[5];
+                puzzlepart9_buton.BackgroundImage = resimdizi[7];
+            }
+            else if (level == 4)
+            {
+                puzzlepart1_buton.BackgroundImage = resimdizi[0];
+                puzzlepart2_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+                puzzlepart3_buton.BackgroundImage = resimdizi[6];
+                puzzlepart4_buton.BackgroundImage = resimdizi[4];
+                puzzlepart5_buton.BackgroundImage = resimdizi[3];
+                puzzlepart6_buton.BackgroundImage = resimdizi[7];
+                puzzlepart7_buton.BackgroundImage = resimdizi[1];
+                puzzlepart8_buton.BackgroundImage = resimdizi[2];
+                puzzlepart9_buton.BackgroundImage = resimdizi[5];
+
+            }
+            else if (level == 5)
+            {
+                puzzlepart1_buton.BackgroundImage = resimdizi[3];
+                puzzlepart2_buton.BackgroundImage = resimdizi[6];
+                puzzlepart3_buton.BackgroundImage = resimdizi[7];
+                puzzlepart4_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+                puzzlepart5_buton.BackgroundImage = resimdizi[5];
+                puzzlepart6_buton.BackgroundImage = resimdizi[4];
+                puzzlepart7_buton.BackgroundImage = resimdizi[1];
+                puzzlepart8_buton.BackgroundImage = resimdizi[2];
+                puzzlepart9_buton.BackgroundImage = resimdizi[8];
+
+            }
+            else if (level == 6)
+            {
+                puzzlepart1_buton.BackgroundImage = resimdizi[0];
+                puzzlepart2_buton.BackgroundImage = resimdizi[6];
+                puzzlepart3_buton.BackgroundImage = resimdizi[7];
+                puzzlepart4_buton.BackgroundImage = resimdizi[1];
+                puzzlepart5_buton.BackgroundImage = resimdizi[8];
+                puzzlepart6_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[4];
+                puzzlepart9_buton.BackgroundImage = resimdizi[5];
+            }
+            else if (level == 7)
+            {
+                puzzlepart1_buton.BackgroundImage = resimdizi[1];
+                puzzlepart2_buton.BackgroundImage = resimdizi[6];
+                puzzlepart3_buton.BackgroundImage = resimdizi[7];
+                puzzlepart4_buton.BackgroundImage = puzelicinbosbuton.BackgroundImage;
+                puzzlepart5_buton.BackgroundImage = resimdizi[4];
+                puzzlepart6_buton.BackgroundImage = resimdizi[8];
+                puzzlepart7_buton.BackgroundImage = resimdizi[2];
+                puzzlepart8_buton.BackgroundImage = resimdizi[3];
+                puzzlepart9_buton.BackgroundImage = resimdizi[5];
+            }
+            puzzlepart1_buton.Enabled = false;
+            puzzlepart2_buton.Enabled = false;
+            puzzlepart3_buton.Enabled = false;
+            puzzlepart4_buton.Enabled = false;
+            puzzlepart5_buton.Enabled = false;
+            puzzlepart6_buton.Enabled = false;
+            puzzlepart7_buton.Enabled = false;
+            puzzlepart8_buton.Enabled = false;
+            puzzlepart9_buton.Enabled = false;
+
+            timer1.Enabled = false; //Timer1'ri pasfi hale getiriyoruz.
+            timer1.Interval = 1000 * 60; //Timer1'in Interval'ini 1000 olarak ayarlıyoruz.1000=1sn
+            timer_puzzlelabel1_dk.Text = "60";
+            timer_puzzlelabel1_dk.ForeColor = Color.DarkCyan;
+            sayi = 60;
+        }
+        int tiklanma_sayisi2 = 0;
+        private void puzelbuton_dur_Click(object sender, EventArgs e)
+        {
+           
+           
+
+            
+            tiklanma_sayisi2++;
+            if (tiklanma_sayisi2 % 2 == 1)
+            {
+                timer_puzzlelabel1_dk.ForeColor = Color.DarkCyan;
+              
+                puzzlepart1_buton.Enabled = false;
+                puzzlepart2_buton.Enabled = false;
+                puzzlepart3_buton.Enabled = false;
+                puzzlepart4_buton.Enabled = false;
+                puzzlepart5_buton.Enabled = false;
+                puzzlepart6_buton.Enabled = false;
+                puzzlepart7_buton.Enabled = false;
+                puzzlepart8_buton.Enabled = false;
+                puzzlepart9_buton.Enabled = false;
+                timer1.Enabled = false;
+                puzzle_bitir_buton.Enabled = false;
+                puzelbuton_dur.Text = "Devam Et";
+            }
+            else
+            {
+                timer_puzzlelabel1_dk.ForeColor = Color.Linen;
+                puzzlepart1_buton.Enabled = true;
+                puzzlepart2_buton.Enabled = true;
+                puzzlepart3_buton.Enabled = true;
+                puzzlepart4_buton.Enabled = true;
+                puzzlepart5_buton.Enabled = true;
+                puzzlepart6_buton.Enabled = true;
+                puzzlepart7_buton.Enabled = true;
+                puzzlepart8_buton.Enabled = true;
+                puzzlepart9_buton.Enabled = true;
+                timer1.Enabled = true;
+                puzzle_bitir_buton.Enabled = true;
+                puzelbuton_dur.Text = "Dur";
+            }
+        }
+       
+        
+       public void gecti_gecmedi_kontrol(Image[]resimdizi)
+        {
+            if (level==1)
+            {
+                if (puzzlepart1_buton.BackgroundImage ==puzelicinbosbuton.BackgroundImage &&
+                puzzlepart2_buton.BackgroundImage == resimdizi[3] &&
+                puzzlepart3_buton.BackgroundImage == resimdizi[6] &&
+                puzzlepart4_buton.BackgroundImage == resimdizi[1] &&
+                puzzlepart5_buton.BackgroundImage == resimdizi[4] &&
+                puzzlepart6_buton.BackgroundImage == resimdizi[7] &&
+                puzzlepart7_buton.BackgroundImage == resimdizi[2] &&
+                puzzlepart8_buton.BackgroundImage == resimdizi[5] &&
+                puzzlepart9_buton.BackgroundImage == resimdizi[8] && Convert.ToInt32(timer_puzzlelabel1_dk.Text) > 0
+
+                   )
+                {
+                    MessageBox.Show("Bu leveli geçtiniz");
+
+                }
+                else
+                {
+                    MessageBox.Show("Bu leveli geçemediniz");
+                }
+            }
+            
+            else if (level == 2)
+            {
+                if (puzzlepart1_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage &&
+                puzzlepart2_buton.BackgroundImage == resimdizi[3]&&
+                puzzlepart3_buton.BackgroundImage == resimdizi[6]&&
+                puzzlepart4_buton.BackgroundImage == resimdizi[1]&&
+                puzzlepart5_buton.BackgroundImage == resimdizi[4]&&
+                puzzlepart6_buton.BackgroundImage == resimdizi[7]&&
+                puzzlepart7_buton.BackgroundImage == resimdizi[2]&&
+                puzzlepart8_buton.BackgroundImage == resimdizi[5]&&
+                puzzlepart9_buton.BackgroundImage == resimdizi[8] && Convert.ToInt32(timer_puzzlelabel1_dk.Text) > 0
+
+                   )
+                {
+                    MessageBox.Show("Bu leveli geçtiniz");
+
+                }
+                else
+                {
+                    MessageBox.Show("Bu leveli geçemediniz");
+                }
+            }
+            else if (level == 3)
+            {
+                if(
+
+                        puzzlepart1_buton.BackgroundImage ==resimdizi[0]&&
+                puzzlepart2_buton.BackgroundImage == resimdizi[3]&&
+                puzzlepart3_buton.BackgroundImage == resimdizi[6]&&
+                puzzlepart4_buton.BackgroundImage == resimdizi[1]&&
+                puzzlepart5_buton.BackgroundImage == resimdizi[4]&&
+                puzzlepart6_buton.BackgroundImage == resimdizi[7]&&
+                puzzlepart7_buton.BackgroundImage == resimdizi[2]&&
+                puzzlepart8_buton.BackgroundImage == resimdizi[5]&&
+                puzzlepart9_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage && Convert.ToInt32(timer_puzzlelabel1_dk.Text) > 0)
+                {
+                    MessageBox.Show("Bu leveli geçtiniz");
+
+                }
+                else
+                {
+                    MessageBox.Show("Bu leveli geçemediniz");
+                }
+            }
+           else if (level == 4)
+            {
+                if (
+
+                        puzzlepart1_buton.BackgroundImage == resimdizi[0] &&
+                puzzlepart2_buton.BackgroundImage == resimdizi[3]&&
+                puzzlepart3_buton.BackgroundImage == resimdizi[6] &&
+                puzzlepart4_buton.BackgroundImage == resimdizi[1] &&
+                puzzlepart5_buton.BackgroundImage == resimdizi[4] &&
+                puzzlepart6_buton.BackgroundImage == resimdizi[7] &&
+                puzzlepart7_buton.BackgroundImage == resimdizi[2] &&
+                puzzlepart8_buton.BackgroundImage == resimdizi[5] &&
+                puzzlepart9_buton.BackgroundImage ==puzelicinbosbuton.BackgroundImage && Convert.ToInt32(timer_puzzlelabel1_dk.Text) > 0)
+                {
+                    MessageBox.Show("Bu leveli geçtiniz");
+
+                }
+                else
+                {
+                    MessageBox.Show("Bu leveli geçemediniz");
+                }
+            }
+            else if (level == 5)
+            {
+
+                if (
+
+                        puzzlepart1_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage &&
+                puzzlepart2_buton.BackgroundImage == resimdizi[3] &&
+                puzzlepart3_buton.BackgroundImage == resimdizi[6] &&
+                puzzlepart4_buton.BackgroundImage == resimdizi[1] &&
+                puzzlepart5_buton.BackgroundImage == resimdizi[4] &&
+                puzzlepart6_buton.BackgroundImage == resimdizi[7] &&
+                puzzlepart7_buton.BackgroundImage == resimdizi[2] &&
+                puzzlepart8_buton.BackgroundImage == resimdizi[5] &&
+                puzzlepart9_buton.BackgroundImage == resimdizi[8]&& Convert.ToInt32(timer_puzzlelabel1_dk.Text) > 0)
+                {
+                    MessageBox.Show("Bu leveli geçtiniz");
+
+                }
+                else
+                {
+                    MessageBox.Show("Bu leveli geçemediniz");
+                }
+            }
+            else if (level == 6)
+            {   if(puzzlepart1_buton.BackgroundImage == resimdizi[0] &&
+                puzzlepart2_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage &&
+                puzzlepart3_buton.BackgroundImage == resimdizi[6] &&
+                puzzlepart4_buton.BackgroundImage == resimdizi[1] &&
+                puzzlepart5_buton.BackgroundImage == resimdizi[4] &&
+                puzzlepart6_buton.BackgroundImage == resimdizi[7] &&
+                puzzlepart7_buton.BackgroundImage == resimdizi[2] &&
+                puzzlepart8_buton.BackgroundImage == resimdizi[5] &&
+                puzzlepart9_buton.BackgroundImage == resimdizi[8]&& Convert.ToInt32(timer_puzzlelabel1_dk.Text) > 0)
+                {
+                    MessageBox.Show("Bu leveli geçtiniz");
+
+                }
+                else
+                {
+                    MessageBox.Show("Bu leveli geçemediniz");
+                }
+
+
+
+            }
+            else if (level == 7)
+            {
+                if (puzzlepart1_buton.BackgroundImage == puzelicinbosbuton.BackgroundImage &&
+                   puzzlepart2_buton.BackgroundImage == resimdizi[3] &&
+                   puzzlepart3_buton.BackgroundImage == resimdizi[6] &&
+                   puzzlepart4_buton.BackgroundImage == resimdizi[1]&&
+                   puzzlepart5_buton.BackgroundImage == resimdizi[4] &&
+                   puzzlepart6_buton.BackgroundImage == resimdizi[7] &&
+                   puzzlepart7_buton.BackgroundImage == resimdizi[2] &&
+                   puzzlepart8_buton.BackgroundImage == resimdizi[5] &&
+                   puzzlepart9_buton.BackgroundImage == resimdizi[8] && Convert.ToInt32(timer_puzzlelabel1_dk.Text) > 0)
+                {
+                    MessageBox.Show("Bu leveli geçtiniz");
+
+                }
+                else
+                {
+                    MessageBox.Show("Bu leveli geçemediniz");
+                }
+
+
+            }
+
+        }
+      
+        public void puzzle_bitir_buton_Click(object sender, EventArgs e)
+        {   timer_puzzlelabel1_dk.ForeColor=Color.DarkCyan;
+            timer1.Enabled = false;
+            gecti_gecmedi_kontrol(resimdizi);          
+            puzzle_bitir_buton.Enabled = false;
+            puzzlepart1_buton.Enabled = false;
+            puzzlepart2_buton.Enabled = false;
+            puzzlepart3_buton.Enabled = false;
+            puzzlepart4_buton.Enabled = false;
+            puzzlepart5_buton.Enabled = false;
+            puzzlepart6_buton.Enabled = false;
+            puzzlepart7_buton.Enabled = false;
+            puzzlepart8_buton.Enabled = false;
+            puzzlepart9_buton.Enabled = false;
+        }
+    }
+    }

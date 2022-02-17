@@ -1,0 +1,313 @@
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\MySql.Data.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\Google.Protobuf.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\Zstandard.Net.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\Renci.SshNet.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\System.Memory.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\System.Buffers.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Derda\Desktop\Ebakus\Ebakus\bin\Debug\MySql.Data.xml
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.Form1.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.kutuphane.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.Login.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMesaj.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciNot.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenDersler.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMenu.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenNot.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMenu.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.oyunlarMenu.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.oyun_cografya_puzzle.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.Properties.Resources.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimkutuphane.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimogrenci.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneli.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneligiris.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.GenerateResource.cache
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CoreCompileInputs.cache
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CopyComplete
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.csprojAssemblyReference.cache
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMesaj.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyunuMenu.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyun.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ebakus.exe.config
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ebakus.exe
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ebakus.pdb
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Google.Protobuf.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Zstandard.Net.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Renci.SshNet.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Memory.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Buffers.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\bin\Debug\MySql.Data.xml
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.exe.config
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.Form1.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyun.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyunuMenu.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.kutuphane.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.Login.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMesaj.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciNot.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenDersler.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMenu.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMesaj.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenNot.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMenu.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.oyunlarMenu.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.oyun_cografya_puzzle.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.Properties.Resources.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.sifremiunuttum.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimkutuphane.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimogrenci.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneli.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneligiris.resources
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CopyComplete
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.exe
+C:\Users\User\Desktop\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\MySql.Data.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Google.Protobuf.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Zstandard.Net.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\Renci.SshNet.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Memory.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Buffers.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\bin\Debug\MySql.Data.xml
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csprojAssemblyReference.cache
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.Form1.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyun.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyunuMenu.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.kutuphane.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.Login.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMesaj.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciNot.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenDersler.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMenu.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMesaj.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenNot.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMenu.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.oyunlarMenu.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.oyun_cografya_puzzle.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.Properties.Resources.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.sifremiunuttum.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimkutuphane.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimogrenci.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneli.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneligiris.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.GenerateResource.cache
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CoreCompileInputs.cache
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CopyComplete
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimOgretmen.resources
+C:\Users\Derda\Desktop\Ebakus Son\Ebakus4.0\Ebakus\Ebakus\obj\Debug\Ebakus.canavar.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\Ebakus.exe.config
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\Ebakus.exe
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\Ebakus.pdb
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\Google.Protobuf.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\Zstandard.Net.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\Renci.SshNet.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\System.Memory.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\System.Buffers.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\bin\Debug\MySql.Data.xml
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.csprojAssemblyReference.cache
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.exe.config
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.canavar.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.Form1.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyun.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyunuMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.kutuphane.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.Login.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMesaj.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciNot.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenDersler.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMesaj.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenNot.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.oyunlarMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.oyun_cografya_puzzle.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.Properties.Resources.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.sifremiunuttum.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimkutuphane.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimogrenci.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimOgretmen.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneli.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneligiris.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.GenerateResource.cache
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CoreCompileInputs.cache
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CopyComplete
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.exe
+C:\Users\aycan\source\repos\Ebakus\Ebakus\obj\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\MySql.Data.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\Google.Protobuf.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\Zstandard.Net.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\Renci.SshNet.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\System.Memory.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\System.Buffers.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\bin\Debug\MySql.Data.xml
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.csprojAssemblyReference.cache
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.canavar.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.Form1.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyun.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyunuMenu.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.kutuphane.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.Login.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMesaj.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciNot.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenDersler.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMenu.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMesaj.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenNot.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMenu.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.oyunlarMenu.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.oyun_cografya_puzzle.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.Properties.Resources.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimkutuphane.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimogrenci.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimOgretmen.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneli.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneligiris.resources
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.GenerateResource.cache
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CoreCompileInputs.cache
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CopyComplete
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\Yeni klasör (2)\Ebakus\Ebakus\obj\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.canavar.resources
+C:\Users\Derda\Desktop\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimOgretmen.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\Ebakus.exe.config
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\Ebakus.exe
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\Ebakus.pdb
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\Google.Protobuf.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\Zstandard.Net.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\Renci.SshNet.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\System.Memory.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\System.Buffers.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\bin\Debug\MySql.Data.xml
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csprojAssemblyReference.cache
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.exe.config
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.canavar.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.Form1.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyun.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyunuMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.kutuphane.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.Login.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMesaj.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciNot.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenDersler.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMesaj.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenNot.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.oyunlarMenu.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.oyun_cografya_puzzle.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.Properties.Resources.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimkutuphane.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimogrenci.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimOgretmen.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneli.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneligiris.resources
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.GenerateResource.cache
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CoreCompileInputs.cache
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CopyComplete
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.exe
+C:\Users\aycan\source\repos\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\Ebakus.pdb
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\MySql.Data.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\Google.Protobuf.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\Zstandard.Net.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\Renci.SshNet.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\System.Memory.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\System.Buffers.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\bin\Debug\MySql.Data.xml
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csprojAssemblyReference.cache
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.exe.config
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.canavar.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.Form1.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyun.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.HafizaOyunuMenu.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.kutuphane.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.Login.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMesaj.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciNot.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenDersler.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMenu.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenMesaj.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogretmenNot.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.ogrenciMenu.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.oyunlarMenu.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.oyun_cografya_puzzle.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.Properties.Resources.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimkutuphane.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimogrenci.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimOgretmen.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneli.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.yonetimpaneligiris.resources
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.GenerateResource.cache
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CoreCompileInputs.cache
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.csproj.CopyComplete
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.exe
+C:\Users\Derda\Desktop\BM102_Proje_AbdurrahmanDerdaKaraaslan_RabiaNurÖzdemir\Ebakus\Ebakus\Ebakus\obj\Debug\Ebakus.pdb

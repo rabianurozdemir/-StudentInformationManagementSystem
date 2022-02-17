@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A2E86BF-F686-444F-8909-BE615E3DF5DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ebakus</RootNamespace>
+    <AssemblyName>Ebakus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BedenEgitimiNot.cs" />
+    <Compile Include="canavarli_toplama_oyunu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="canavarli_toplama_oyunu.Designer.cs">
+      <DependentUpon>canavarli_toplama_oyunu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hafizaOyun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hafizaOyun.Designer.cs">
+      <DependentUpon>hafizaOyun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hafizaOyunuMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hafizaOyunuMenu.Designer.cs">
+      <DependentUpon>hafizaOyunuMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HayatBilgisiNot.cs" />
+    <Compile Include="IOgretmenNot.cs" />
+    <Compile Include="KullaniciBilgileri.cs" />
+    <Compile Include="kutuphane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kutuphane.Designer.cs">
+      <DependentUpon>kutuphane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatematikNot.cs" />
+    <Compile Include="MuzikNot.cs" />
+    <Compile Include="OgrenciBilgileri.cs" />
+    <Compile Include="ogrenciMesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogrenciMesaj.Designer.cs">
+      <DependentUpon>ogrenciMesaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogrenciNot.Designer.cs">
+      <DependentUpon>ogrenciNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgretmenBilgileri.cs" />
+    <Compile Include="ogretmenDersler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogretmenDersler.Designer.cs">
+      <DependentUpon>ogretmenDersler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmenMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogretmenMenu.Designer.cs">
+      <DependentUpon>ogretmenMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmenMesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogretmenMesaj.Designer.cs">
+      <DependentUpon>ogretmenMesaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmenNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogretmenNot.Designer.cs">
+      <DependentUpon>ogretmenNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogrenciMenu.Designer.cs">
+      <DependentUpon>ogrenciMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oyunlarMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oyunlarMenu.Designer.cs">
+      <DependentUpon>oyunlarMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oyun_cografya_puzzle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oyun_cografya_puzzle.Designer.cs">
+      <DependentUpon>oyun_cografya_puzzle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TurkceNot.cs" />
+    <Compile Include="YabanciDilNot.cs" />
+    <Compile Include="yonetimkutuphane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetimkutuphane.Designer.cs">
+      <DependentUpon>yonetimkutuphane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetimogrenci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetimogrenci.Designer.cs">
+      <DependentUpon>yonetimogrenci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetimOgretmen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetimOgretmen.Designer.cs">
+      <DependentUpon>yonetimOgretmen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetimpaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetimpaneli.Designer.cs">
+      <DependentUpon>yonetimpaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetimpaneligiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetimpaneligiris.Designer.cs">
+      <DependentUpon>yonetimpaneligiris.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="canavarli_toplama_oyunu.resx">
+      <DependentUpon>canavarli_toplama_oyunu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hafizaOyun.resx">
+      <DependentUpon>hafizaOyun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hafizaOyunuMenu.resx">
+      <DependentUpon>hafizaOyunuMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kutuphane.resx">
+      <DependentUpon>kutuphane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrenciMesaj.resx">
+      <DependentUpon>ogrenciMesaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrenciNot.resx">
+      <DependentUpon>ogrenciNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogretmenDersler.resx">
+      <DependentUpon>ogretmenDersler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogretmenMenu.resx">
+      <DependentUpon>ogretmenMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogretmenMesaj.resx">
+      <DependentUpon>ogretmenMesaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogretmenNot.resx">
+      <DependentUpon>ogretmenNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrenciMenu.resx">
+      <DependentUpon>ogrenciMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oyunlarMenu.resx">
+      <DependentUpon>oyunlarMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oyun_cografya_puzzle.resx">
+      <DependentUpon>oyun_cografya_puzzle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetimkutuphane.resx">
+      <DependentUpon>yonetimkutuphane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetimogrenci.resx">
+      <DependentUpon>yonetimogrenci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetimOgretmen.resx">
+      <DependentUpon>yonetimOgretmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetimpaneli.resx">
+      <DependentUpon>yonetimpaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetimpaneligiris.resx">
+      <DependentUpon>yonetimpaneligiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acilis100x100.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lilaarkaplan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arkaplan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kutuphanearkaplan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oyunlarMenuBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turkiyePuzzle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesajBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bildirimMesaj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kucukLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ananas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aycicegi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baykus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyaz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulutlar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulutlar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulutlu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cankurtaran.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ciftci.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elbise.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elcantasi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elephant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firtinali.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giraffe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gunesgozlugu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gunesli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hairdresser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handbag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\havuc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hortum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itfaiyeci.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kahverengi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karpuz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kemer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kirmizi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koyun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kravat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kuafor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kurbaga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lemon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifeguard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marangoz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mavi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maymun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\necktie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ogretmen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\owl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parcalibulutlu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pembe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pineapple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portakal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rainy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruzgarli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sapka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sarkici.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sheep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shorts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siyah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snowy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stormy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sunglasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surgeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tilki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tornado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watermelon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yagmurlu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yuzuk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zurafa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hafizaOyunResim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hafizaOyunResim1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hafizaOyunResim2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hafizaOyunResim3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acikgoz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kapaligoz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canavarOyunResim.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
